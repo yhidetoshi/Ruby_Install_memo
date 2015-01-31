@@ -1,0 +1,25 @@
+・rubyをソースコードからインストール
+
+# yum -y install zlib-devel openssl-devel sqlite sqlite-devel gcc*
+
+1.9.3系
+# wget http://cache.ruby-lang.org/pub/ruby/1.9/ruby-1.9.3-p551.tar.gz
+
+2.0系
+# wget http://cache.ruby-lang.org/pub/ruby/2.0/ruby-2.0.0-p598.tar.gz
+
+2.1.5系
+# wget http://cache.ruby-lang.org/pub/ruby/2.1/ruby-2.1.5.tar.gz
+
+2.2系
+# wget http://cache.ruby-lang.org/pub/ruby/2.2/ruby-2.2.0.tar.gz
+
+#tar xvf <wgetしたファイル>.tar.gz
+
+#cd <解凍したディレクトリ>
+# ./configure
+# make
+# make install
+# ruby -v
+# gem -v
+# ln -s /usr/local/bin/ruby /usr/bin/ruby （rubyのパス調整）
