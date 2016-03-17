@@ -1,4 +1,4 @@
-・rubyをソースコードからインストール
+### rubyをソースコードからインストール
 ```
 # yum -y install zlib-devel openssl-devel sqlite sqlite-devel gcc*
 
@@ -25,12 +25,12 @@
 # ln -s /usr/local/bin/ruby /usr/bin/ruby （rubyのパス調整）
 ```
 
-▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪
-rvmを用いたRubyのインストール
-公開鍵の入手
+
+### rvmを用いたRubyのインストール
+
 
 ```
-# sudo gpg2 --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3
+# gpg2 --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3
 これを実施しないとrvmのインストールの際に「No public key」というエラーが発生することがある（参考：RVMによるrubyのインストール、vagrantのCentOS環境で。 on @Qiita http://qiita.com/uedatakeshi/items/8138d00a762225f01aa3）
 
 rvmのインストール
@@ -76,4 +76,13 @@ Rubyのインストール
 # rvm install ruby-2.2.1
 インストール確認兼バージョン確認
 # ruby -v
+```
+
+### ソースコードからインストールしたRubyをアンインストール
+```
+# wgetで取得したrubyフォルダに移動
+# head .installed.list
+# cat .installed.list | xargs rm -rf
+# ruby
+-> command not foundと出れば成功
 ```
