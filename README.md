@@ -27,7 +27,7 @@
 
 ### rbenv を使って ruby をインストール
 ```
-# yum install -y readline-deve
+# yum install -y openssl-devel zlib-devel readline-devel
 # yum -y install git
 # git clone https://github.com/sstephenson/rbenv.git ~/.rbenv
 
