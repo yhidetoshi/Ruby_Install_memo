@@ -1,3 +1,6 @@
+
+![Alt Text](https://github.com/yhidetoshi/Pictures/raw/master/Ruby_install_memo/ruby-logo.png)
+
 ### rubyをソースコードからインストール
 ```
 # yum -y install zlib-devel openssl-devel sqlite sqlite-devel gcc*
