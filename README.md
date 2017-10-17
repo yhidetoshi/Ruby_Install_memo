@@ -7,6 +7,9 @@
   - `sudo chown -R ec2-user /usr/local/rbenv`
   - `sudo cp -p /etc/profile /etc/profile.org`
 
+- `$ gem env` でパスを確認できる
+  - `EXECUTABLE DIRECTORY`のPathを利用
+  
 - `/etc/profileに追記`
 ```
 export RBENV_ROOT=/usr/local/rbenv
