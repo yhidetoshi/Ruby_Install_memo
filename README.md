@@ -1,6 +1,33 @@
 
 ![Alt Text](https://github.com/yhidetoshi/Pictures/raw/master/Ruby_install_memo/ruby-logo.png)
 
+## Rubyのインストール (Amazon Linux 201709)
+- ec2-user
+  - `sudo git clone git://github.com/sstephenson/rbenv.git /usr/local/rbenv`
+  - `sudo chown -R ec2-user /usr/local/rbenv`
+  - `sudo cp -p /etc/profile /etc/profile.org`
+
+- `/etc/profileに追記`
+```
+export RBENV_ROOT=/usr/local/rbenv
+export PATH="${RBENV_ROOT}/bin:${PATH}"
+eval "$(rbenv init -)"
+```
+- `git clone git://github.com/sstephenson/ruby-build.git /usr/local/rbenv/plugins/ruby-build`
+- `$ rbenv rehash`
+
+- /home/ec2-user/.gemrcに記述
+```
+gem: --no-rdoc --no-ri
+install: --no-document
+update: --no-document
+```
+- `rbenv install --list`
+- `rbenv install 2.X.X`
+- `rbenv global 2.X.X`
+- `rbenv rehash`
+
+
 ### rubyをソースコードからインストール
 ```
 # yum -y install zlib-devel openssl-devel sqlite sqlite-devel gcc*
